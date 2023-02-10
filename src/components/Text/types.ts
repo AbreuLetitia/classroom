@@ -1,5 +1,9 @@
+import {ReactNode} from 'react';
+import {typographyDictionary} from '../../constants/typography/types';
 import {ColorsDictionary} from '../../themes/types';
 
 export interface TextProps {
-  color?: ColorsDictionary;
+  textSize: typographyDictionary;
+  textColor?: ColorsDictionary;
+  children: ReactNode;
 }

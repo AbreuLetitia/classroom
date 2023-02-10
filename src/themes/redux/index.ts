@@ -4,5 +4,9 @@ import {initialState} from './initialState';
 export const themesSlice = createSlice({
   name: 'themes',
   initialState,
-  reducers: {},
+  reducers: {
+    updateSelectedTheme: (state, action) => {
+      state.selectedTheme = action.payload;
+    },
+  },
 });

@@ -1,15 +1,14 @@
-import {SafeAreaView} from 'react-native';
 import {Provider} from 'react-redux';
-import {Text} from './src/components/Text';
+import {width} from './src/constants/responsive';
 import {store} from './src/redux';
+import {Login} from './src/views/Login';
 
 function App() {
+  console.log(width(4.62));
   return (
-    <SafeAreaView>
-      <Provider store={store}>
-        <Text />
-      </Provider>
-    </SafeAreaView>
+    <Provider store={store}>
+      <Login />
+    </Provider>
   );
 }
 
