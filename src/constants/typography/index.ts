@@ -1,6 +1,7 @@
 import {width} from '../responsive';
+import {textWeightTypographyValues} from './types';
 
-export const typography = {
+export const textSizeTypography = {
   largeTitle: width(8.72), //34
   title1: width(7.18), //28
   title2: width(5.646), //22
@@ -12,4 +13,16 @@ export const typography = {
   footnote: width(3.35), //13
   caption1: width(3.1), //12
   caption2: width(2.83), //11
+};
+
+export const textWeightTypography: textWeightTypographyValues = {
+  ultraLight: '100',
+  thin: '200',
+  light: '300',
+  regular: '400',
+  medium: '500',
+  semiBold: '600',
+  bold: '700',
+  heavy: '800',
+  black: '900',
 };

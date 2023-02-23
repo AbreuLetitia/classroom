@@ -1,27 +1,32 @@
 import {TouchableHighlight} from 'react-native';
-import {useSelector} from 'react-redux';
-import {Store} from '../../redux/types';
-import {themes} from '../../themes';
 import {Text} from '../Text';
-import {ButtonProps} from './types';
+import {ButtonProps, ButtonTheme} from './types';
+import {useStyles} from './styles';
+import {ColorsDictionary} from '../../themes/types';
 
 export const Button = ({
   title,
-  backgroundColor = 'secondary1',
-  textColor = 'primary1',
+  buttonTheme = 'primary',
+  textWeight = 'medium',
+  textSize = 'body',
   ...rest
 }: ButtonProps) => {
-  const theme = useSelector((store: Store) => {
-    return store.themes;
-  });
+  const styles = useStyles();
+
+  const helper: {[arg in ButtonTheme]: ColorsDictionary} = {
+    primary: 'secondary1',
+    warning: 'warning1',
+    disabled: 'disabled',
+  };
 
   return (
-    <TouchableHighlight
-      style={{
-        backgroundColor: themes[theme.selectedTheme][backgroundColor],
-      }}
-      {...rest}>
-      <Text textColor={textColor}>{title}</Text>
+    <TouchableHighlight style={styles[buttonTheme]} {...rest}>
+      <Text
+        textSize={textSize}
+        textWeight={textWeight}
+        textColor={helper[buttonTheme]}>
+        {title}
+      </Text>
     </TouchableHighlight>
   );
 };

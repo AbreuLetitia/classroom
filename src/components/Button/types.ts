@@ -1,8 +1,10 @@
-import {TouchableHighlightProps} from 'react-native/types';
-import {ColorsDictionary} from '../../themes/types';
+import {TouchableHighlightProps} from 'react-native';
+import {TextProps} from '../Text/types';
 
-export interface ButtonProps extends TouchableHighlightProps {
+export type ButtonTheme = 'disabled' | 'warning' | 'primary';
+export interface ButtonProps
+  extends Omit<TouchableHighlightProps, 'disabled'>,
+    Omit<TextProps, 'children'> {
   title: string;
-  textColor?: ColorsDictionary;
-  backgroundColor?: ColorsDictionary;
+  buttonTheme?: ButtonTheme;
 }

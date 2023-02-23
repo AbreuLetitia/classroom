@@ -1,9 +1,14 @@
 import {ReactNode} from 'react';
-import {typographyDictionary} from '../../constants/typography/types';
+import {
+  textSizeTypographyDictionary,
+  textWeightTypographyDictionary,
+} from '../../constants/typography/types';
 import {ColorsDictionary} from '../../themes/types';
 
 export interface TextProps {
-  textSize: typographyDictionary;
+  textWeight?: textWeightTypographyDictionary;
+  textSize?: textSizeTypographyDictionary;
   textColor?: ColorsDictionary;
   children: ReactNode;
+  textFamily?: 'SF Pro Rounded' | 'SF Pro Text';
 }

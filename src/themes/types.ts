@@ -6,6 +6,8 @@ export type ColorsDictionary =
   | 'secondary1'
   | 'secondary2'
   | 'secondary3'
+  | 'disabled'
+  | 'disabled1'
   | 'warning1'
   | 'warning2'
   | 'warning3';
