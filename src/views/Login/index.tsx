@@ -5,6 +5,7 @@ import {Input} from '../../components/Input';
 import {Text} from '../../components/Text';
 import {Store} from '../../redux/types';
 import {themes} from '../../themes';
+import {Icon} from '../../components/Icon';
 
 export const Login = () => {
   const theme = useSelector((store: Store) => {
@@ -22,10 +23,9 @@ export const Login = () => {
           <Text textSize="title1">Login</Text>
           <View style={{height: 20}} />
         </View>
-
         <Input placeholder="email" />
         <View style={{height: 10}} />
-
+        <Icon iconName="IconAbacus" color="yellow" size={100} />
         <Input placeholder="password" />
         <View style={{height: 20}} />
         <View style={{alignItems: 'center'}}>

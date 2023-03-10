@@ -12,7 +12,6 @@ export const useStyles = () => {
     primary: {
       backgroundColor: themes[theme.selectedTheme].primary1,
       borderColor: themes[theme.selectedTheme].secondary1,
-      textColor: themes[theme.selectedTheme].secondary1,
       shadowColor: themes[theme.selectedTheme].secondary1,
       borderRadius: 6,
       paddingVertical: 5,
@@ -27,7 +26,6 @@ export const useStyles = () => {
     warning: {
       backgroundColor: themes[theme.selectedTheme].primary1,
       borderColor: themes[theme.selectedTheme].warning1,
-      textColor: themes[theme.selectedTheme].warning1,
       shadowColor: themes[theme.selectedTheme].warning1,
       borderRadius: 6,
       paddingVertical: 5,
@@ -42,7 +40,6 @@ export const useStyles = () => {
     disabled: {
       backgroundColor: themes[theme.selectedTheme].disabled1,
       borderColor: themes[theme.selectedTheme].disabled,
-      textColor: themes[theme.selectedTheme].disabled,
       borderRadius: 6,
       paddingVertical: 5,
       borderWidth: 1,
